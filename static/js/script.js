@@ -52,6 +52,10 @@ $(document).ready(function() {
 	} // end if
 
 
+    // Hide Django messages after 4 seconds
+    setTimeout(function() {
+        $('#message').fadeOut('slow');
+    }, 4000);
 
 
     
