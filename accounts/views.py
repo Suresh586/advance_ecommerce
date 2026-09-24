@@ -179,7 +179,7 @@ def forgotpassword(request):
 
     return render (request,'accounts/forgotpassword.html')
 
-def resetpassword_validate(request):
+def resetpassword_validate(request,uidb64,token):
     try:
         uid=urlsafe_base64_decode(uidb64).decode()
         user=Account._default_manager.get(pk=uid)
@@ -204,7 +204,7 @@ def resetpassword(request):
             user=Account.objects.get(pk=uid)
             user.set_password(password)
             user.save()
-            messages.success(reset ,'Password reset successful')
+            messages.success(request ,'Password reset successful')
             return redirect ('login')
 
 
