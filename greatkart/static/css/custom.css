@@ -1,0 +1,99 @@
+/* Hide Radio button */
+.rate > input{
+    display: none;
+}
+
+.rate{
+    display: inline-block;;
+    border: 0;
+}
+
+.rate > label{
+    float: right;
+}
+
+/* Showing the stars */
+.rate > label:before{
+    display: inline-block;
+    font-size: 1.1rem;
+    font-family: FontAwesome;
+    content: "\f005";
+    margin: 0;
+    padding: 0.3rem .2rem;
+    cursor: pointer;
+}
+
+/* Half star */
+.rate .half:before{
+    content: "\f089";
+    position: absolute;
+    padding-right: 0;
+}
+input:checked ~ label, label:hover ~ label{
+    color:#ffb503;
+}
+
+input:checked + label:hover, input:checked ~ label:hover,input:checked ~ label:hover~label,
+label:hover ~ input:checked ~ label {
+    color: #cc9000;
+}
+
+.rating-star i{
+    color: #ffb503 !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .rate {
+    display: inline-block;
+    border: 0;
+}
+
+.rate > input {
+    display: none;
+}
+
+.rate > label {
+    float: right;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 35px;
+    margin: 0 2px;
+}
+
+.rate > label:before {
+    content: "\2605";
+}
+
+.rate > input:checked ~ label {
+    color: #ffc107;
+}
+
+.rate > label:hover,
+.rate > label:hover ~ label {
+    color: #ffc107;
+}
+
+.rate > label.half {
+    position: relative;
+    width: 17px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.rate > label.half:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    overflow: hidden;
+} */
